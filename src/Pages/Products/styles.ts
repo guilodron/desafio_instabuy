@@ -26,6 +26,19 @@ export const Itens = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media(max-width: 440px){
+    div {
+      margin: 5px 2px;
+      width: 160px;
+    }
+  }
+  @media(max-width: 330px){
+    div {
+      margin: 0px 2px;
+      width: 160px;
+    }
+  }
 `;
 
 export const Select = styled.select`
