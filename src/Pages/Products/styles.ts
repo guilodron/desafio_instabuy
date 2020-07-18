@@ -6,6 +6,13 @@ export const Container = styled.div`
   margin-left: auto;
   display: flex;
   flex-direction: column;
+
+  @media(max-width: 1400px) {
+    h1 {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
 `;
 
 export const Collection = styled.div`
@@ -31,6 +38,11 @@ export const Select = styled.select`
       margin: 0 10px;
     }
   }
+  @media(max-width: 540px) {
+    & + & {
+      margin: 10px 0;
+    }
+  }
 
 
 `;
@@ -45,6 +57,7 @@ export const Filters = styled.div`
   @media(max-width: 540px) {
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
     margin-left: 30px;
   }
 
