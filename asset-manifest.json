@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/desafio_instabuy/static/js/main.a586fc8a.chunk.js",
+    "main.js.map": "/desafio_instabuy/static/js/main.a586fc8a.chunk.js.map",
+    "runtime-main.js": "/desafio_instabuy/static/js/runtime-main.53d2e221.js",
+    "runtime-main.js.map": "/desafio_instabuy/static/js/runtime-main.53d2e221.js.map",
+    "static/js/2.dafc29b5.chunk.js": "/desafio_instabuy/static/js/2.dafc29b5.chunk.js",
+    "static/js/2.dafc29b5.chunk.js.map": "/desafio_instabuy/static/js/2.dafc29b5.chunk.js.map",
+    "index.html": "/desafio_instabuy/index.html",
+    "precache-manifest.51a17fa05a36056e42de8e0ffde3a4b0.js": "/desafio_instabuy/precache-manifest.51a17fa05a36056e42de8e0ffde3a4b0.js",
+    "service-worker.js": "/desafio_instabuy/service-worker.js",
+    "static/js/2.dafc29b5.chunk.js.LICENSE.txt": "/desafio_instabuy/static/js/2.dafc29b5.chunk.js.LICENSE.txt",
+    "static/media/logo-desktop.png": "/desafio_instabuy/static/media/logo-desktop.316b1f45.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.53d2e221.js",
+    "static/js/2.dafc29b5.chunk.js",
+    "static/js/main.a586fc8a.chunk.js"
+  ]
+}
