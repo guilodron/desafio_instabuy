@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import Item from '../../Components/Item';
+import Banner from '../../Components/Banner';
 import {
   Container, Collection, Itens, Select, Filters, Input,
 } from './styles';
@@ -31,6 +32,11 @@ interface IFilteredProduct {
   section: string;
 }
 
+interface ICategory {
+  id: string;
+  title: string;
+}
+
 const Products: React.FC = () => {
   const sizes = {
     s: 'small/s',
@@ -41,6 +47,7 @@ const Products: React.FC = () => {
   const [produtos, setProdutos] = useState([] as IFilteredProduct[]);
   const [filter, setFilter] = useState('none');
   const [search, setSearch] = useState('');
+  const [categories, setCategories] = useState([] as ICategory[]);
 
   useEffect(() => {
     axios.get('https://api.instabuy.com.br/apiv3/layout?subdomain=organicos')
@@ -48,17 +55,19 @@ const Products: React.FC = () => {
       .then((data) => data.data.collection_items)
       .then((collections) => {
         const products = collections.map((collection: ICollection) => {
-          const secao = collection.title;
+          setCategories((c) => [...c, { title: collection.title, id: collection.id }]);
           return collection.items.map((item) => ({
             name: item.name,
             id: item.id,
             image: item.images[0],
             price: item.prices[0].price,
-            section: secao,
+            section: collection.title,
           }));
         });
         let allProducts: IFilteredProduct[] = [];
-        products.forEach((item: IFilteredProduct[]) => { allProducts = [...allProducts, ...item]; });
+        products.forEach(
+          (item: IFilteredProduct[]) => { allProducts = [...allProducts, ...item]; },
+        );
         setProdutos(allProducts);
       });
   }, []);
@@ -90,13 +99,15 @@ const Products: React.FC = () => {
 
   return (
     <Container>
+      <Banner />
       <h1 style={{ color: 'rgb(0, 128, 0, 0.8)', borderBottom: '3px solid green' }}>Orgânicos</h1>
       <Filters>
         <span>Filtros:</span>
         <Select id="select" onChange={handleFilterChange}>
           <option value="none">Categoria</option>
-          <option value="Mercearia">Mercearia</option>
-          <option value="Nossa Horta">Nossa Horta</option>
+          {categories && categories.map((category) => (
+            <option key={category.id} value={category.title}>{category.title}</option>
+          ))}
         </Select>
         <Select onChange={handleSort}>
           <option value="none">Ordenar</option>
