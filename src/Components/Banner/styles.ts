@@ -1,15 +1,6 @@
 import styled from 'styled-components';
 
-interface IImages {
-  mobile: string;
-  desktop: string;
-}
-
-interface ContainerProps {
-  images: IImages | undefined;
-}
-
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div`
   max-width: 1350px;
   margin-bottom: 20px;
 

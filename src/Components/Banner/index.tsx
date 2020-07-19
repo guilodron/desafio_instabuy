@@ -40,7 +40,7 @@ const Banner: React.FC = () => {
   }, []);
 
   return (
-    <Container images={images}>
+    <Container>
       <img src={isMobile ? images?.mobile : images?.desktop} alt="banner" />
     </Container>
   );
