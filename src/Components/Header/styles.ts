@@ -10,6 +10,7 @@ export const Container = styled.header`
 
 
   img{
+    margin-left: 10px;
     background: transparent;
     height: 50px;
   }

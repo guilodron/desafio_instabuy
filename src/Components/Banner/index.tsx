@@ -15,14 +15,8 @@ interface IBanner {
 
 const Banner: React.FC = () => {
   const [images, setImages] = useState<IImages>();
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
-
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 600);
-  };
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
     const save: IImages = {} as IImages;
 
     axios.get('https://api.instabuy.com.br/apiv3/layout?subdomain=organicos')
@@ -41,7 +35,10 @@ const Banner: React.FC = () => {
 
   return (
     <Container>
-      <img src={isMobile ? images?.mobile : images?.desktop} alt="banner" />
+      <picture>
+        <source media="(min-width: 600px)" srcSet={images?.desktop} />
+        <img src={images?.mobile} alt="banner" />
+      </picture>
     </Container>
   );
 };

@@ -4,7 +4,9 @@ import iconDesktop from '../../assets/logo-desktop.png';
 
 const Header:React.FC = () => (
   <Container>
-    <img src={iconDesktop} alt="logo" />
+    <a href="/">
+      <img src={iconDesktop} alt="logo" />
+    </a>
   </Container>
 );
 
