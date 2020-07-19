@@ -1,5 +1,4 @@
 import React from 'react';
-import { AiOutlineGithub } from 'react-icons/ai';
 import { Container } from './styles';
 
 const Footer: React.FC = () => (
@@ -13,7 +12,7 @@ const Footer: React.FC = () => (
         <br />
         Rodrigues
       </span>
-      <AiOutlineGithub fill="white" size={45} />
+      <i className="fa fa-github" style={{ fontSize: 50, backgroundColor: 'transparent' }} />
     </a>
   </Container>
 );
