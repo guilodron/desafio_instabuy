@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/desafio_instabuy/precache-manifest.f59510d8b2a922649071c1be65dfd488.js"
+  "/desafio_instabuy/precache-manifest.bb3efba213e0307476d6bf3db680c693.js"
 );
 
 self.addEventListener('message', (event) => {

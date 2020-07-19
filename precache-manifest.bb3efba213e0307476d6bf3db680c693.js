@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "48254c70c8b0aaf390713761ab7ff6b9",
+    "revision": "4d0c979ae8dd3fb2555687fb511769d3",
     "url": "/desafio_instabuy/index.html"
   },
   {
-    "revision": "847f8aac8ec0d78db944",
-    "url": "/desafio_instabuy/static/js/2.dafc29b5.chunk.js"
+    "revision": "aa85a69d551829dbfef7",
+    "url": "/desafio_instabuy/static/js/2.d5fa7f0a.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/desafio_instabuy/static/js/2.dafc29b5.chunk.js.LICENSE.txt"
+    "url": "/desafio_instabuy/static/js/2.d5fa7f0a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "32758aabd6e303c26b09",
-    "url": "/desafio_instabuy/static/js/main.38617f9d.chunk.js"
+    "revision": "05ac4ba7d41a6474f609",
+    "url": "/desafio_instabuy/static/js/main.03d5f423.chunk.js"
   },
   {
     "revision": "5de629f6763507aa6d6d",
